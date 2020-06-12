@@ -800,7 +800,6 @@
 		4FF016F6134E14E2001447BA /* wdlstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdlstring.h; path = ../../iPlug2/WDL/wdlstring.h; sourceTree = SOURCE_ROOT; };
 		4FF01719134E153A001447BA /* heapbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = heapbuf.h; path = ../../iPlug2/WDL/heapbuf.h; sourceTree = SOURCE_ROOT; };
 		4FF3204F20B2BFAB00269268 /* IPlugPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugPaths.h; path = ../../iPlug2/IPlug/IPlugPaths.h; sourceTree = "<group>"; tabWidth = 2; };
-		4FF7B0D4156A825000E6CB12 /* common-mac.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "common-mac.xcconfig"; path = "../../iPlug2/common-mac.xcconfig"; sourceTree = SOURCE_ROOT; };
 		4FF7B0F3156A831000E6CB12 /* AAXLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AAXLibrary.xcodeproj; path = ../../iPlug2/Dependencies/IPlug/AAX_SDK/Libs/AAXLibrary/MacBuild/AAXLibrary.xcodeproj; sourceTree = SOURCE_ROOT; };
 		4FF83B5E20B6E901007A0E4B /* IVScopeControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IVScopeControl.h; sourceTree = "<group>"; };
 		4FF93DF8209C68A400310D7C /* IPlugAUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugAUViewController.h; path = ../../iPlug2/IPlug/AUv3/IPlugAUViewController.h; sourceTree = "<group>"; };
@@ -812,6 +811,7 @@
 		4FFBB94120863E9300DDD0E7 /* IPlugVST3_Parameter.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugVST3_Parameter.h; path = ../../iPlug2/IPlug/VST3/IPlugVST3_Parameter.h; sourceTree = "<group>"; tabWidth = 2; };
 		4FFF72B8214BB71400839091 /* main.rc */ = {isa = PBXFileReference; lastKnownFileType = text; name = main.rc; path = ../resources/main.rc; sourceTree = "<group>"; };
 		52FBBED30D0CF143001C8B8A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../config.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		AF9055602490E89300FCBD63 /* my-common-mac.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "my-common-mac.xcconfig"; path = "../../my-common-mac.xcconfig"; sourceTree = "<group>"; };
 		B8E22A0A220268C4007CBF4C /* IPlugVST3_ProcessorBase.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugVST3_ProcessorBase.cpp; path = ../../iPlug2/IPlug/VST3/IPlugVST3_ProcessorBase.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		B8E22A0B220268C4007CBF4C /* IPlugVST3_ProcessorBase.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugVST3_ProcessorBase.h; path = ../../iPlug2/IPlug/VST3/IPlugVST3_ProcessorBase.h; sourceTree = "<group>"; tabWidth = 2; };
 		B8EA6B932203868500D23A86 /* IPlugVST3_Common.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugVST3_Common.h; path = ../../iPlug2/IPlug/VST3/IPlugVST3_Common.h; sourceTree = "<group>"; tabWidth = 2; };
@@ -962,7 +962,7 @@
 			children = (
 				4FBBD7F320B6AB9800A37DE2 /* config */,
 				4F3862FF2014BCC70009F402 /* scripts */,
-				4FF7B0D4156A825000E6CB12 /* common-mac.xcconfig */,
+				AF9055602490E89300FCBD63 /* my-common-mac.xcconfig */,
 				4FDA600620B586AC00C49ABA /* BitReKt-mac.xcconfig */,
 			);
 			name = "Other Sources";
@@ -1332,7 +1332,7 @@
 				4F8157DE205D50EA00393585 /* source */,
 			);
 			name = public.sdk;
-			path = ../../iPlug2/Dependencies/IPlug/VST3_SDK/public.sdk;
+			path = ../../vst3sdk/public.sdk;
 			sourceTree = "<group>";
 		};
 		4F8157DE205D50EA00393585 /* source */ = {
@@ -1409,7 +1409,7 @@
 				4F8158D5205D50EB00393585 /* thread */,
 			);
 			name = base;
-			path = ../../iPlug2/Dependencies/IPlug/VST3_SDK/base;
+			path = ../../vst3sdk/base;
 			sourceTree = "<group>";
 		};
 		4F8158BE205D50EB00393585 /* source */ = {
@@ -1478,7 +1478,7 @@
 				4F8158FF205D50EB00393585 /* vst */,
 			);
 			name = pluginterfaces;
-			path = ../../iPlug2/Dependencies/IPlug/VST3_SDK/pluginterfaces;
+			path = ../../vst3sdk/pluginterfaces;
 			sourceTree = "<group>";
 		};
 		4F8158DD205D50EB00393585 /* base */ = {
