@@ -106,7 +106,7 @@ FT_PATH = $(BUILT_LIBS_INC_PATH)/freetype2
 SKIA_PATH = $(DEPS_PATH)/Build/src/skia
 YOGA_PATH = $(DEPS_PATH)/IGraphics/yoga
 
-SKIA_INC_PATHS = $(SKIA_PATH) $(SKIA_PATH)/include/core $(SKIA_PATH)/include/effects $(SKIA_PATH)/include/config $(SKIA_PATH)/include/utils $(SKIA_PATH)/include/utils/mac $(SKIA_PATH)/include/gpu $(SKIA_PATH)/experimental/svg/model
+SKIA_INC_PATHS = $(SKIA_PATH) $(SKIA_PATH)/include/core $(SKIA_PATH)/include/effects $(SKIA_PATH)/include/config $(SKIA_PATH)/include/utils $(SKIA_PATH)/include/utils/mac $(SKIA_PATH)/include/gpu $(SKIA_PATH)/experiment $(SKIA_PATH)/third_party/externals/icu/source/common
 
 YOGA_INC_PATHS = $(YOGA_PATH) $(YOGA_PATH)/yoga
 
@@ -142,7 +142,6 @@ IGRAPHICS_LNK_FLAGS = $(SKIA_LNK_FLAGS) $(LICE_LNK_FLAGS) $(CAIRO_LNK_FLAGS)
 ALL_FRAMEWORKS = -framework Cocoa -framework Carbon -framework CoreFoundation -framework CoreData -framework Foundation -framework CoreServices -framework Metal -framework MetalKit -framework QuartzCore -framework WebKit -framework OpenGL
 APP_FRAMEWORKS = -framework AppKit -framework CoreMIDI -framework CoreAudio
 AU_FRAMEWORKS = -framework AudioUnit -framework AudioToolbox -framework CoreAudio -framework CoreMIDI
-AU_FRAMEWORKS = -framework AudioToolbox -framework AudioUnit -framework CoreAudio -framework CoreMIDI
 AUv3_FRAMEWORKS = -framework AudioToolbox -framework AVFoundation -framework CoreAudio -framework CoreAudioKit
 
 
