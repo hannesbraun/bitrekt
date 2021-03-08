@@ -142,7 +142,7 @@
 		4F722020225C1EB100FF0E7C /* commoniids.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F72201E225C1EB100FF0E7C /* commoniids.cpp */; };
 		4F722021225C1EB100FF0E7C /* commoniids.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F72201E225C1EB100FF0E7C /* commoniids.cpp */; };
 		4F78BE1222E73DD900AD537E /* AUv3Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F78BE1022E73DD900AD537E /* AUv3Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F78BE1422E7406D00AD537E /* BitReKt.h in Sources */ = {isa = PBXBuildFile; fileRef = 4F3862EE2014BBEC0009F402 /* BitReKt.h */; };
+		4F78BE1422E7406D00AD537E /* BitReKt.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F3862EE2014BBEC0009F402 /* BitReKt.hpp */; };
 		4F78BE1522E7406D00AD537E /* BitReKt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F3862ED2014BBEC0009F402 /* BitReKt.cpp */; };
 		4F78BE1622E7406D00AD537E /* IGraphicsMac_view.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F58620E4AFEF004157C8 /* IGraphicsMac_view.mm */; };
 		4F78BE1722E7406D00AD537E /* IGraphicsMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FB1F58120E4AFEE004157C8 /* IGraphicsMac.mm */; };
@@ -314,6 +314,28 @@
 		4FFBB93020863B0E00DDD0E7 /* fbuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8158C1205D50EB00393585 /* fbuffer.cpp */; };
 		4FFBB93420863B0E00DDD0E7 /* coreiids.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8158E0205D50EB00393585 /* coreiids.cpp */; };
 		4FFBB93520863B0E00DDD0E7 /* vstnoteexpressiontypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F81588E205D50EB00393585 /* vstnoteexpressiontypes.cpp */; };
+		AF32739D25EEAE2C00772A52 /* Downsampler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AF32739925EEAE2C00772A52 /* Downsampler.hpp */; };
+		AF32739E25EEAE2C00772A52 /* Downsampler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AF32739925EEAE2C00772A52 /* Downsampler.hpp */; };
+		AF32739F25EEAE2C00772A52 /* Downsampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739A25EEAE2C00772A52 /* Downsampler.cpp */; };
+		AF3273A025EEAE2C00772A52 /* Downsampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739A25EEAE2C00772A52 /* Downsampler.cpp */; };
+		AF3273A125EEAE2C00772A52 /* Downsampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739A25EEAE2C00772A52 /* Downsampler.cpp */; };
+		AF3273A225EEAE2C00772A52 /* Downsampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739A25EEAE2C00772A52 /* Downsampler.cpp */; };
+		AF3273A325EEAE2C00772A52 /* Downsampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739A25EEAE2C00772A52 /* Downsampler.cpp */; };
+		AF3273A425EEAE2C00772A52 /* Downsampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739A25EEAE2C00772A52 /* Downsampler.cpp */; };
+		AF3273A525EEAE2C00772A52 /* Downsampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739A25EEAE2C00772A52 /* Downsampler.cpp */; };
+		AF3273A625EEAE2C00772A52 /* Downsampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739A25EEAE2C00772A52 /* Downsampler.cpp */; };
+		AF3273A725EEAE2C00772A52 /* Downsampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739A25EEAE2C00772A52 /* Downsampler.cpp */; };
+		AF3273A825EEAE2C00772A52 /* BitCrusher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739B25EEAE2C00772A52 /* BitCrusher.cpp */; };
+		AF3273A925EEAE2C00772A52 /* BitCrusher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739B25EEAE2C00772A52 /* BitCrusher.cpp */; };
+		AF3273AA25EEAE2C00772A52 /* BitCrusher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739B25EEAE2C00772A52 /* BitCrusher.cpp */; };
+		AF3273AB25EEAE2C00772A52 /* BitCrusher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739B25EEAE2C00772A52 /* BitCrusher.cpp */; };
+		AF3273AC25EEAE2C00772A52 /* BitCrusher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739B25EEAE2C00772A52 /* BitCrusher.cpp */; };
+		AF3273AD25EEAE2C00772A52 /* BitCrusher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739B25EEAE2C00772A52 /* BitCrusher.cpp */; };
+		AF3273AE25EEAE2C00772A52 /* BitCrusher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739B25EEAE2C00772A52 /* BitCrusher.cpp */; };
+		AF3273AF25EEAE2C00772A52 /* BitCrusher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739B25EEAE2C00772A52 /* BitCrusher.cpp */; };
+		AF3273B025EEAE2C00772A52 /* BitCrusher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF32739B25EEAE2C00772A52 /* BitCrusher.cpp */; };
+		AF3273B125EEAE2C00772A52 /* BitCrusher.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AF32739C25EEAE2C00772A52 /* BitCrusher.hpp */; };
+		AF3273B225EEAE2C00772A52 /* BitCrusher.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AF32739C25EEAE2C00772A52 /* BitCrusher.hpp */; };
 		B885CBC52304AE7300D73128 /* IPlugProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F61A8202807B9003F2573 /* IPlugProcessor.cpp */; };
 		B8E22A0C220268C4007CBF4C /* IPlugVST3_ProcessorBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8E22A0A220268C4007CBF4C /* IPlugVST3_ProcessorBase.cpp */; };
 		B8E22A0D220268C4007CBF4C /* IPlugVST3_ProcessorBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8E22A0A220268C4007CBF4C /* IPlugVST3_ProcessorBase.cpp */; };
@@ -462,7 +484,7 @@
 		4F35DEAB207E5C5A00867D8F /* IPlugPluginBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugPluginBase.cpp; path = ../../../IPlug/IPlugPluginBase.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		4F35DEAC207E5C5A00867D8F /* IPlugPluginBase.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugPluginBase.h; path = ../../../IPlug/IPlugPluginBase.h; sourceTree = "<group>"; tabWidth = 2; };
 		4F3862ED2014BBEC0009F402 /* BitReKt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BitReKt.cpp; path = ../BitReKt.cpp; sourceTree = "<group>"; };
-		4F3862EE2014BBEC0009F402 /* BitReKt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BitReKt.h; path = ../BitReKt.h; sourceTree = "<group>"; };
+		4F3862EE2014BBEC0009F402 /* BitReKt.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BitReKt.hpp; path = ../BitReKt.hpp; sourceTree = "<group>"; };
 		4F3862FF2014BCC70009F402 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = scripts; path = ../scripts; sourceTree = "<group>"; };
 		4F3907602013EBA300DDA490 /* BitReKt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BitReKt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F3907772013EC0400DDA490 /* IPlugAUViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = IPlugAUViewController.mm; path = ../../../IPlug/AUv3/IPlugAUViewController.mm; sourceTree = "<group>"; };
@@ -778,6 +800,10 @@
 		4FFBB94120863E9300DDD0E7 /* IPlugVST3_Parameter.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugVST3_Parameter.h; path = ../../../IPlug/VST3/IPlugVST3_Parameter.h; sourceTree = "<group>"; tabWidth = 2; };
 		4FFF72B8214BB71400839091 /* main.rc */ = {isa = PBXFileReference; lastKnownFileType = text; name = main.rc; path = ../resources/main.rc; sourceTree = "<group>"; };
 		52FBBED30D0CF143001C8B8A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../config.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		AF32739925EEAE2C00772A52 /* Downsampler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Downsampler.hpp; path = ../Downsampler.hpp; sourceTree = "<group>"; };
+		AF32739A25EEAE2C00772A52 /* Downsampler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Downsampler.cpp; path = ../Downsampler.cpp; sourceTree = "<group>"; };
+		AF32739B25EEAE2C00772A52 /* BitCrusher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BitCrusher.cpp; path = ../BitCrusher.cpp; sourceTree = "<group>"; };
+		AF32739C25EEAE2C00772A52 /* BitCrusher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BitCrusher.hpp; path = ../BitCrusher.hpp; sourceTree = "<group>"; };
 		B8E22A0A220268C4007CBF4C /* IPlugVST3_ProcessorBase.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugVST3_ProcessorBase.cpp; path = ../../../IPlug/VST3/IPlugVST3_ProcessorBase.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		B8E22A0B220268C4007CBF4C /* IPlugVST3_ProcessorBase.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugVST3_ProcessorBase.h; path = ../../../IPlug/VST3/IPlugVST3_ProcessorBase.h; sourceTree = "<group>"; tabWidth = 2; };
 		B8EA6B932203868500D23A86 /* IPlugVST3_Common.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = IPlugVST3_Common.h; path = ../../../IPlug/VST3/IPlugVST3_Common.h; sourceTree = "<group>"; tabWidth = 2; };
@@ -857,8 +883,12 @@
 		089C166AFE841209C02AAC07 /* IPlugExample */ = {
 			isa = PBXGroup;
 			children = (
+				AF32739B25EEAE2C00772A52 /* BitCrusher.cpp */,
+				AF32739C25EEAE2C00772A52 /* BitCrusher.hpp */,
+				AF32739A25EEAE2C00772A52 /* Downsampler.cpp */,
+				AF32739925EEAE2C00772A52 /* Downsampler.hpp */,
 				52FBBED30D0CF143001C8B8A /* config.h */,
-				4F3862EE2014BBEC0009F402 /* BitReKt.h */,
+				4F3862EE2014BBEC0009F402 /* BitReKt.hpp */,
 				4F3862ED2014BBEC0009F402 /* BitReKt.cpp */,
 				4F9313232315CA1100DB2383 /* README.md */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -1624,6 +1654,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F78BE1222E73DD900AD537E /* AUv3Framework.h in Headers */,
+				AF32739E25EEAE2C00772A52 /* Downsampler.hpp in Headers */,
+				AF3273B225EEAE2C00772A52 /* BitCrusher.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1648,12 +1680,14 @@
 				4F63696520A463090022C370 /* IVKeyboardControl.h in Headers */,
 				4F03A5D520A4621100EBDFFB /* IGraphicsConstants.h in Headers */,
 				4FF3205820B2BFAB00269268 /* IPlugPaths.h in Headers */,
+				AF3273B125EEAE2C00772A52 /* BitCrusher.hpp in Headers */,
 				4F03A5B720A4621100EBDFFB /* IGraphics.h in Headers */,
 				4F6FD2B022675B6300FC59E6 /* IGraphicsCoreText.h in Headers */,
 				4F03A5D220A4621100EBDFFB /* IGraphicsPopupMenu.h in Headers */,
 				4FC3EFFE2086CE5700BD11FA /* processdata.h in Headers */,
 				4FC3F0002086CE5700BD11FA /* stringconvert.h in Headers */,
 				4F8C10E720BA2796006320CD /* IGraphicsEditorDelegate.h in Headers */,
+				AF32739D25EEAE2C00772A52 /* Downsampler.hpp in Headers */,
 				4FC3EFFA2086CE5700BD11FA /* parameterchanges.h in Headers */,
 				4F9A82F6213DE80400BE63A4 /* IPopupMenuControl.h in Headers */,
 				4F03A5B320A4621100EBDFFB /* IGraphics_include_in_plug_src.h in Headers */,
@@ -2215,6 +2249,7 @@
 			files = (
 				4FDAC0EB207D76C600299363 /* IPlugTimer.cpp in Sources */,
 				4F63696E20A463090022C370 /* IControls.cpp in Sources */,
+				AF3273A925EEAE2C00772A52 /* BitCrusher.cpp in Sources */,
 				4F03A5AD20A4621100EBDFFB /* IGraphics.cpp in Sources */,
 				4F5F344220C0226200487201 /* IPlugPaths.mm in Sources */,
 				4F6369EC20A466470022C370 /* IControl.cpp in Sources */,
@@ -2230,6 +2265,7 @@
 				4F993F7223055C96000313AF /* IPlugProcessor.cpp in Sources */,
 				4F35DEAE207E5C5A00867D8F /* IPlugPluginBase.cpp in Sources */,
 				4F6FD2B222675B6300FC59E6 /* IGraphicsCoreText.mm in Sources */,
+				AF3273A025EEAE2C00772A52 /* Downsampler.cpp in Sources */,
 				4F78D9C813B63BA50032E0F3 /* IPlugParameter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2251,8 +2287,10 @@
 				4F6369EE20A466470022C370 /* IControl.cpp in Sources */,
 				4F1A528C205D916F00CF2908 /* IPlugAU.cpp in Sources */,
 				4F63697020A463090022C370 /* IControls.cpp in Sources */,
+				AF3273A225EEAE2C00772A52 /* Downsampler.cpp in Sources */,
 				4FD52131202A5B9B00A4D22A /* IPlugAU_view_factory.mm in Sources */,
 				4F993F7423055C96000313AF /* IPlugProcessor.cpp in Sources */,
+				AF3273AB25EEAE2C00772A52 /* BitCrusher.cpp in Sources */,
 				4F8C10E320BA2796006320CD /* IGraphicsEditorDelegate.cpp in Sources */,
 				4F6FD2B422675B6300FC59E6 /* IGraphicsCoreText.mm in Sources */,
 				4F9A82FA213DE80400BE63A4 /* IPopupMenuControl.cpp in Sources */,
@@ -2285,6 +2323,7 @@
 				4F3EE1CC231438D000004786 /* IPlugPaths.mm in Sources */,
 				4F3EE1CD231438D000004786 /* swell-miscdlg.mm in Sources */,
 				4F3EE1CF231438D000004786 /* swell-menu.mm in Sources */,
+				AF3273A725EEAE2C00772A52 /* Downsampler.cpp in Sources */,
 				4F3EE1D0231438D000004786 /* IGraphicsMac_view.mm in Sources */,
 				4F3EE1D1231438D000004786 /* swell-appstub.mm in Sources */,
 				4F3EE1D2231438D000004786 /* swell-misc.mm in Sources */,
@@ -2306,6 +2345,7 @@
 				4F3EE1E2231438D000004786 /* IGraphicsEditorDelegate.cpp in Sources */,
 				4F3EE1E3231438D000004786 /* swell-gdi.mm in Sources */,
 				4F3EE1E4231438D000004786 /* IPlugParameter.cpp in Sources */,
+				AF3273B025EEAE2C00772A52 /* BitCrusher.cpp in Sources */,
 				4F3EE1E5231438D000004786 /* IPlugTimer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2314,10 +2354,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F78BE1422E7406D00AD537E /* BitReKt.h in Sources */,
+				4F78BE1422E7406D00AD537E /* BitReKt.hpp in Sources */,
 				4F0D965C23099F6900BFDED0 /* IPlugProcessor.cpp in Sources */,
 				4F78BE1522E7406D00AD537E /* BitReKt.cpp in Sources */,
 				4F78BE1622E7406D00AD537E /* IGraphicsMac_view.mm in Sources */,
+				AF3273AF25EEAE2C00772A52 /* BitCrusher.cpp in Sources */,
 				4F78BE1722E7406D00AD537E /* IGraphicsMac.mm in Sources */,
 				4F78BE1822E7406D00AD537E /* IGraphicsCoreText.mm in Sources */,
 				4F78BE1922E7406D00AD537E /* ITextEntryControl.cpp in Sources */,
@@ -2334,6 +2375,7 @@
 				4F78BE2622E7406D00AD537E /* IPlugAPIBase.cpp in Sources */,
 				4F78BE2822E7406D00AD537E /* IPlugParameter.cpp in Sources */,
 				4F78BE2922E7406D00AD537E /* IPlugTimer.cpp in Sources */,
+				AF3273A625EEAE2C00772A52 /* Downsampler.cpp in Sources */,
 				4F78BE2A22E7406D00AD537E /* IPlugPaths.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2344,6 +2386,7 @@
 			files = (
 				4F81597C205D50EB00393585 /* baseiids.cpp in Sources */,
 				4FDAC0EC207D76C600299363 /* IPlugTimer.cpp in Sources */,
+				AF3273A125EEAE2C00772A52 /* Downsampler.cpp in Sources */,
 				B8E22A0C220268C4007CBF4C /* IPlugVST3_ProcessorBase.cpp in Sources */,
 				4F3862F12014BBEC0009F402 /* BitReKt.cpp in Sources */,
 				4F81591F205D50EB00393585 /* pluginfactory.cpp in Sources */,
@@ -2381,6 +2424,7 @@
 				4F81598D205D51F000393585 /* vstaudioeffect.cpp in Sources */,
 				4F81598C205D51CF00393585 /* vstsinglecomponenteffect.cpp in Sources */,
 				4F815984205D50EB00393585 /* updatehandler.cpp in Sources */,
+				AF3273AA25EEAE2C00772A52 /* BitCrusher.cpp in Sources */,
 				4F815990205D51F000393585 /* vstcomponent.cpp in Sources */,
 				4F815981205D50EB00393585 /* fstreamer.cpp in Sources */,
 				4F815996205D51F000393585 /* vstrepresentation.cpp in Sources */,
@@ -2402,6 +2446,7 @@
 				4F993F7523055C97000313AF /* IPlugProcessor.cpp in Sources */,
 				4FDAC0EE207D76C600299363 /* IPlugTimer.cpp in Sources */,
 				4F8C10E420BA2796006320CD /* IGraphicsEditorDelegate.cpp in Sources */,
+				AF3273AC25EEAE2C00772A52 /* BitCrusher.cpp in Sources */,
 				4F6369E120A464BB0022C370 /* IGraphicsNanoVG_src.m in Sources */,
 				4F63697120A463090022C370 /* IControls.cpp in Sources */,
 				4FB6001A1567CB0A0020189A /* IPlugAPIBase.cpp in Sources */,
@@ -2418,6 +2463,7 @@
 				4FB600261567CB0A0020189A /* AAX_Exports.cpp in Sources */,
 				4F6FD2B522675B6300FC59E6 /* IGraphicsCoreText.mm in Sources */,
 				4FB600281567CB0A0020189A /* IPlugAAX_Describe.cpp in Sources */,
+				AF3273A325EEAE2C00772A52 /* Downsampler.cpp in Sources */,
 				4FB1F58D20E4B007004157C8 /* IGraphicsMac.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2432,12 +2478,14 @@
 				4F6FD2B722675B6300FC59E6 /* IGraphicsCoreText.mm in Sources */,
 				4F8C10E620BA2796006320CD /* IGraphicsEditorDelegate.cpp in Sources */,
 				4FC3EFF92086CE5700BD11FA /* parameterchanges.cpp in Sources */,
+				AF3273AE25EEAE2C00772A52 /* BitCrusher.cpp in Sources */,
 				4FC3EFCE2086C35D00BD11FA /* IPlugPluginBase.cpp in Sources */,
 				4F722021225C1EB100FF0E7C /* commoniids.cpp in Sources */,
 				4F63697320A463090022C370 /* IControls.cpp in Sources */,
 				4FCE29DD21D6ED70004BCBA1 /* ITextEntryControl.cpp in Sources */,
 				4FB1F59620E4B017004157C8 /* IGraphicsMac_view.mm in Sources */,
 				4F9A82FD213DE80400BE63A4 /* IPopupMenuControl.cpp in Sources */,
+				AF3273A525EEAE2C00772A52 /* Downsampler.cpp in Sources */,
 				4F472103209B294400A0A0A8 /* IPlugVST3_Controller.cpp in Sources */,
 				4F78BE2D22E7412300AD537E /* IGraphicsNanoVG_src.m in Sources */,
 				4FC3EFCB2086C27800BD11FA /* BitReKt.cpp in Sources */,
@@ -2460,6 +2508,7 @@
 				4F5F344120C0226200487201 /* IPlugPaths.mm in Sources */,
 				4FD16D3C13B6358C001D0217 /* swell-miscdlg.mm in Sources */,
 				4FD16D3E13B63595001D0217 /* swell-menu.mm in Sources */,
+				AF32739F25EEAE2C00772A52 /* Downsampler.cpp in Sources */,
 				4FB1F59120E4B011004157C8 /* IGraphicsMac_view.mm in Sources */,
 				4F5C5F6B21BED08700E024A7 /* swell-appstub.mm in Sources */,
 				4FD16D4013B635A0001D0217 /* swell-misc.mm in Sources */,
@@ -2481,6 +2530,7 @@
 				4F8C10E020BA2796006320CD /* IGraphicsEditorDelegate.cpp in Sources */,
 				4FF0A83221BE708700B2C9D1 /* swell-gdi.mm in Sources */,
 				4F78D91813B63BA50032E0F3 /* IPlugParameter.cpp in Sources */,
+				AF3273A825EEAE2C00772A52 /* BitCrusher.cpp in Sources */,
 				4FDAC0EA207D76C600299363 /* IPlugTimer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2491,6 +2541,7 @@
 			files = (
 				4FFBB90520863B0E00DDD0E7 /* baseiids.cpp in Sources */,
 				4FFBB90620863B0E00DDD0E7 /* IPlugTimer.cpp in Sources */,
+				AF3273AD25EEAE2C00772A52 /* BitCrusher.cpp in Sources */,
 				4FFBB90720863B0E00DDD0E7 /* BitReKt.cpp in Sources */,
 				4FFBB90820863B0E00DDD0E7 /* pluginfactory.cpp in Sources */,
 				4FFBB90920863B0E00DDD0E7 /* vstinitiids.cpp in Sources */,
@@ -2521,6 +2572,7 @@
 				4FFBB92620863B0E00DDD0E7 /* updatehandler.cpp in Sources */,
 				4FFBB92820863B0E00DDD0E7 /* vstcomponent.cpp in Sources */,
 				4FFBB92C20863B0E00DDD0E7 /* fstreamer.cpp in Sources */,
+				AF3273A425EEAE2C00772A52 /* Downsampler.cpp in Sources */,
 				4FFBB92D20863B0E00DDD0E7 /* vstrepresentation.cpp in Sources */,
 				4FFBB92E20863B0E00DDD0E7 /* fcondition.cpp in Sources */,
 				4FFBB93020863B0E00DDD0E7 /* fbuffer.cpp in Sources */,

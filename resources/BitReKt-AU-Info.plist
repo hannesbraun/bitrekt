@@ -10,13 +10,13 @@
 			<key>factoryFunction</key>
 			<string>BitReKt_Factory</string>
 			<key>manufacturer</key>
-			<string>Acme</string>
+			<string>HnBr</string>
 			<key>name</key>
 			<string>HannesBraun: BitReKt</string>
 			<key>sandboxSafe</key>
 			<true/>
 			<key>subtype</key>
-			<string>Ipef</string>
+			<string>BRKT</string>
 			<key>type</key>
 			<string>aufx</string>
 			<key>version</key>
@@ -30,9 +30,9 @@
 	<key>CFBundleExecutable</key>
 	<string>BitReKt</string>
 	<key>CFBundleGetInfoString</key>
-	<string>BitReKt v1.0.0 Copyright 2020 Acme Inc</string>
+	<string>BitReKt v1.0.0 Copyright 2021 Hannes Braun</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.HannesBraun.audiounit.BitReKt</string>
+	<string>de.HannesBraun.audiounit.BitReKt</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -42,7 +42,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.0</string>
 	<key>CFBundleSignature</key>
-	<string>Ipef</string>
+	<string>BRKT</string>
 	<key>CFBundleVersion</key>
 	<string>1.0.0</string>
 	<key>CSResourcesFileMapped</key>
