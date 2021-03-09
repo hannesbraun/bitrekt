@@ -12,7 +12,6 @@ BitReKt::BitReKt(const InstanceInfo& info)
   GetParam(kOutputGain)->InitDouble("Output Gain", 100.0, 0., 200.0, 0.01, "%");
   GetParam(kClippingEnabled)->InitBool("Clipping", true, "", 0, "", "Enabled", "Disabled");
 
-#if IPLUG_EDITOR // http://bit.ly/2S64BDd
   mMakeGraphicsFunc = [&]()
   {
     return MakeGraphics(*this, PLUG_WIDTH, PLUG_HEIGHT, PLUG_FPS, GetScaleForScreen(PLUG_WIDTH, PLUG_HEIGHT));
@@ -26,8 +25,12 @@ BitReKt::BitReKt(const InstanceInfo& info)
     const IRECT b = pGraphics->GetBounds();
     pGraphics->AttachControl(new ITextControl(b.GetFromTop(100).GetCentredInside(PLUG_WIDTH, 60), "BitReKt", IText(50)));
 
-    pGraphics->AttachControl(new ILEDControl(b.GetReducedFromTop(100).GetFromTop(14).GetReducedFromRight(20).GetFromRight(20), COLOR_RED), kCtrlTagClipping);
-    pGraphics->AttachControl(new ITextControl(b.GetReducedFromTop(100).GetFromTop(14).GetReducedFromRight(45).GetFromRight(40), "Clipping", IText(14)));
+    pGraphics->AttachControl(new ILEDControl(b.GetReducedFromTop(90).GetFromTop(14).GetReducedFromRight(20).GetFromRight(20), COLOR_GREEN), kCtrlTagSignalIn);
+    pGraphics->AttachControl(new ITextControl(b.GetReducedFromTop(90).GetFromTop(14).GetReducedFromRight(45).GetFromRight(39), "Signal In", IText(14)));
+    pGraphics->AttachControl(new ILEDControl(b.GetReducedFromTop(110).GetFromTop(14).GetReducedFromRight(20).GetFromRight(20), COLOR_BLUE), kCtrlTagOfflineRender);
+    pGraphics->AttachControl(new ITextControl(b.GetReducedFromTop(110).GetFromTop(14).GetReducedFromRight(45).GetFromRight(80), "Offline Rendering", IText(14)));
+    pGraphics->AttachControl(new ILEDControl(b.GetReducedFromTop(130).GetFromTop(14).GetReducedFromRight(20).GetFromRight(20), COLOR_RED), kCtrlTagClipping);
+    pGraphics->AttachControl(new ITextControl(b.GetReducedFromTop(130).GetFromTop(14).GetReducedFromRight(45).GetFromRight(37), "Clipping", IText(14)));
 
     const IVStyle redKnobStyle
     {
@@ -80,20 +83,37 @@ BitReKt::BitReKt(const InstanceInfo& info)
       }, // Colors
     };
 
-    pGraphics->AttachControl(new IVKnobControl(b.GetReducedFromTop(150).GetFromTop(100).GetFromLeft(PLUG_WIDTH / 2), kBits, "", redKnobStyle));
-    pGraphics->AttachControl(new IVKnobControl(b.GetReducedFromTop(150).GetFromTop(100).GetFromRight(PLUG_WIDTH / 2), kSampleRate, "", blueKnobStyle));
-    pGraphics->AttachControl(new IVKnobControl(b.GetReducedFromTop(280).GetFromTop(100).GetFromLeft(PLUG_WIDTH / 3), kInputGain, "", blackKnobStyle));
-    pGraphics->AttachControl(new IVKnobControl(b.GetReducedFromTop(280).GetFromTop(100).GetReducedFromLeft(PLUG_WIDTH / 3).GetReducedFromRight(PLUG_WIDTH / 3), kMix, "", blackKnobStyle));
-    pGraphics->AttachControl(new IVKnobControl(b.GetReducedFromTop(280).GetFromTop(100).GetFromRight(PLUG_WIDTH / 3), kOutputGain, "", blackKnobStyle));
+    pGraphics->AttachControl(new IVKnobControl(b.GetReducedFromTop(170).GetFromTop(100).GetFromLeft(PLUG_WIDTH / 2), kBits, "", redKnobStyle));
+    pGraphics->AttachControl(new IVKnobControl(b.GetReducedFromTop(170).GetFromTop(100).GetFromRight(PLUG_WIDTH / 2), kSampleRate, "", blueKnobStyle));
+    pGraphics->AttachControl(new IVKnobControl(b.GetReducedFromTop(300).GetFromTop(100).GetFromLeft(PLUG_WIDTH / 3), kInputGain, "", blackKnobStyle));
+    pGraphics->AttachControl(new IVKnobControl(b.GetReducedFromTop(300).GetFromTop(100).GetReducedFromLeft(PLUG_WIDTH / 3).GetReducedFromRight(PLUG_WIDTH / 3), kMix, "", blackKnobStyle));
+    pGraphics->AttachControl(new IVKnobControl(b.GetReducedFromTop(300).GetFromTop(100).GetFromRight(PLUG_WIDTH / 3), kOutputGain, "", blackKnobStyle));
 
-    pGraphics->AttachControl(new ITextToggleControl(b.GetReducedFromTop(410).GetFromTop(20).GetFromLeft(PLUG_WIDTH / 3), kClippingEnabled, "Clipping disabled", "Clipping enabled"));
-    pGraphics->AttachControl(new ITextControl(b.GetReducedFromTop(410).GetFromTop(20).GetCentredInside(PLUG_WIDTH / 2), "Copyright 2021 Hannes Braun", IText(14)));
-    pGraphics->AttachControl(new ITextControl(b.GetReducedFromTop(410).GetFromTop(20).GetFromRight(PLUG_WIDTH / 3), "Version 1.0.0", IText(14)));
+    pGraphics->AttachControl(new ITextToggleControl(b.GetReducedFromTop(430).GetFromTop(20).GetFromLeft(PLUG_WIDTH / 3).GetCentredInside(PLUG_WIDTH / 4), kClippingEnabled, "Clipping disabled", "Clipping enabled"));
+    pGraphics->AttachControl(new ITextControl(b.GetReducedFromTop(430).GetFromTop(20).GetCentredInside(PLUG_WIDTH / 2), "Copyright 2021 Hannes Braun", IText(14)));
+    pGraphics->AttachControl(new ITextControl(b.GetReducedFromTop(430).GetFromTop(20).GetFromRight(PLUG_WIDTH / 3), "Version 1.0.0", IText(14)));
   };
-#endif
 }
 
-#if IPLUG_DSP
+void BitReKt::OnIdle()
+{
+  // Status LEDs
+  if (!GetBypassed())
+    SendControlValueFromDelegate(kCtrlTagSignalIn, 1.0);
+  else
+    SendControlValueFromDelegate(kCtrlTagSignalIn, 0.0);
+    
+  if (GetRenderingOffline())
+    SendControlValueFromDelegate(kCtrlTagOfflineRender, 1.0);
+  else
+    SendControlValueFromDelegate(kCtrlTagOfflineRender, 0.0);
+
+  if (clippingSignal.load())
+    SendControlValueFromDelegate(kCtrlTagClipping, 1.0);
+  else
+    SendControlValueFromDelegate(kCtrlTagClipping, 0.0);
+}
+
 void BitReKt::ProcessBlock(sample** inputs, sample** outputs, int nFrames)
 {
   const int nChans = NOutChansConnected();
@@ -108,8 +128,7 @@ void BitReKt::ProcessBlock(sample** inputs, sample** outputs, int nFrames)
   double drySignal;
   double tmpSignal;
 
-  IGraphics* ui = GetUI();
-
+  clippingSignal.store(false);
   bitCrusher.setBits(bits);
   downsampler.configure(targetSampleRate, GetSampleRate(), GetSamplePos());
 
@@ -123,15 +142,12 @@ void BitReKt::ProcessBlock(sample** inputs, sample** outputs, int nFrames)
       if (clipping && drySignal > 1.0)
       {
         tmpSignal = 1.0;
-
-        if (ui != NULL)
-          ui->GetControlWithTag(kCtrlTagClipping)->As<ILEDControl>()->TriggerWithDecay(444);
+        clippingSignal.store(true);
       }
       else if (clipping && drySignal < -1.0)
       {
         tmpSignal = -1.0;
-        if (ui != NULL)
-          ui->GetControlWithTag(kCtrlTagClipping)->As<ILEDControl>()->TriggerWithDecay(444);
+        clippingSignal.store(true);
       }
       else
         tmpSignal = drySignal;
@@ -145,4 +161,3 @@ void BitReKt::ProcessBlock(sample** inputs, sample** outputs, int nFrames)
     downsampler.nextSample();
   }
 }
-#endif
