@@ -1,5 +1,7 @@
 #include "Downsampler.hpp"
 
+#define FADEIN 0.1
+
 Downsampler::Downsampler()
 {
   for (int i = 0; i <= MAX_CHANNELS; i++)
@@ -11,11 +13,19 @@ Downsampler::Downsampler()
 
 void Downsampler::configure(double targetSampleRate, double hostSampleRate, double samplePosition)
 {
-  this->sampleLen = hostSampleRate / 44100;
-  this->sampleLen *= 44100.0 / targetSampleRate;
+  this->sampleLen = hostSampleRate / BASE_SAMPLE_RATE;
+  this->sampleLen *= BASE_SAMPLE_RATE / targetSampleRate;
   if (sampleLen < 1.0)
+    // Avoid oversampling
     sampleLen = 1.0;
+
   this->tts = samplePosition - this->sampleLen * ((int)(samplePosition / this->sampleLen));
+
+  // Fade in the effect in the highest 10% (FADEIN) to allow turning this effect completely off
+  const double fadeinRange = BASE_SAMPLE_RATE - BASE_SAMPLE_RATE * FADEIN;
+  this->wetness = (BASE_SAMPLE_RATE - targetSampleRate) / fadeinRange;
+  if (this->wetness > 1.0)
+    this->wetness = 1.0;
 }
 
 double Downsampler::resample(double sample, int channel)
@@ -24,16 +34,15 @@ double Downsampler::resample(double sample, int channel)
     // Only supporting two channels
     return sample;
 
-  // Fix first sample at playback (maybe old last value stored)
-
   if (this->tts >= this->sampleLen)
   {
+    // It's time to sample!
     double frac = this->tts - this->sampleLen;
     this->sampleOut[channel] = frac * sample + (1 - frac) * lastSampleIn[channel];
   }
 
   this->lastSampleIn[channel] = sample;
-  return this->sampleOut[channel];
+  return this->wetness * this->sampleOut[channel] + (1.0 - this->wetness) * sample;
 }
 
 void Downsampler::nextSample()

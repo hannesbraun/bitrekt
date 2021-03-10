@@ -6,7 +6,7 @@ BitReKt::BitReKt(const InstanceInfo& info)
   : Plugin(info, MakeConfig(kNumParams, kNumPresets))
 {
   GetParam(kBits)->InitDouble("Bits", 8.0, 1.0, 16.0, 0.01, "Bit");
-  GetParam(kSampleRate)->InitFrequency("Sample Rate", 44100.0, 100.0, 44100.0, 0.01);
+  GetParam(kSampleRate)->InitFrequency("Sample Rate", BASE_SAMPLE_RATE, 100.0, BASE_SAMPLE_RATE, 0.01);
   GetParam(kInputGain)->InitDouble("Input Gain", 100.0, 0., 200.0, 0.01, "%");
   GetParam(kMix)->InitDouble("Dry/Wet", 100.0, 0., 100.0, 0.01, "%");
   GetParam(kOutputGain)->InitDouble("Output Gain", 100.0, 0., 200.0, 0.01, "%");
