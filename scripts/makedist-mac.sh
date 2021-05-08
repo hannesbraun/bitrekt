@@ -80,7 +80,9 @@ echo ""
 
 #---------------------------------------------------------------------------------------------------------
 
-./scripts/update_installer_version.py $DEMO
+cd scripts
+./update_installer_version.py $DEMO
+cd ..
 
 echo "touching source to force recompile" 
 touch *.cpp
